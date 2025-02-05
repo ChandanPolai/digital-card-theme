@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <div id="theme-container">
+
+            <!-- THIS IS A PART OF USER TAB -->
+            <div class="user-tab">
+
+                <!-- USER{PROFILES} -->
+                <div class="profile-container">
+                    <div class="image-darkicons">
+                        <img src="images\chandan3.jpg" alt="Profile Picture" class="profile-pic">
+                        <button id="dark-icon"><i class="fa-sharp fa-solid fa-moon"></i></button>
+                    </div>
+                    <h2 class="name">John Smith</h2>
+                    <p class="title">Marketing Manager</p>
+                    <div class="contact-btns">
+
+                        <button class="btn contact-btn"><i class="fa-solid fa-address-book"></i> Add to Contact</button>
+                        <button class="btn call-btn"><i class="fa-solid fa-phone"></i> Call</button>
+                    </div>
+                    <div id="qr">
+                        <button class="btn qr-btn"><i class="fa-solid fa-arrow-up"></i> Qr Code</button>
+                    </div>
+                </div>
+
+                <!-- THIS IS A PART OF NAVIGATION TAB -->
+
+                <div id="navigation-tab">
+                    <button class="nav-btn-icons gallery" > gallery</button>
+                    <button class="nav-btn-icons social" >social</button>
+                    <button class="nav-btn-icons info" >info  </button>
+            </div>
+
+            </div>
+
+            <div class="icons-tab">
+            
+            <!-- this is part of SOCIAL ICONS -->
+             <div class="main">
+                <a href="https://www.facebook.com/qoiky" target="_blank" class="card-item">
+                    <img src="./images/facebook.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="http://www.instagram.com/qoikycard" target="_blank" class="card-item">
+                    <img src="./images/Instagram_icon.png.webp" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.linkedin.com/company/qoiky/" target="_blank" class="card-item">
+                    <img src="./images/linkedin.svg" alt="Linkedin">
+                    <span>Linkedin</span>
+                </a>
+                <a href="https://www.x.com/qoikycard" target="_blank" class="card-item">
+                    <img src="./images/twiter.svg" alt="Twitter">
+                    <span>Twitter</span>
+                </a>
+                <a href="https://wa.me/+12244832435" class="card-item">
+                    <img src="./images/whatsapp.svg" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.youtube.com/@coniaxnfc" target="_blank" class="card-item">
+                    <img src="./images/youtube.svg" alt="Youtube">
+                    <span>Youtube</span>
+                </a>
+                <a href="tel:+12244832435" class="card-item">
+                    <img src="./images/phone.svg" alt="Phone">
+                    <span>Phone</span>
+                </a>
+                <a href="mailto:info@qoiky.com" class="card-item">
+                    <img src="./images/email.svg" alt="E-mail">
+                    <span>E-mail</span>
+                </a>
+                <a href="http://www.qoiky.com/" target="_blank" class="card-item">
+                    <img src="images/website.svg" alt="Website">
+                    <span>Website</span>
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="card-item">
+                    <img src="./images/icontiktok.svg" alt="TikTok">
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.spotify.com/" target="_blank" class="card-item">
+                    <img src="./images/iconspotify01.svg" alt="Spotify">
+                    <span>Spotify</span>
+                </a>
+                <a href="https://www.pinterest.com/" target="_blank" class="card-item">
+                    <img src="./images/iconpinterest01.svg" alt="Pinterest">
+                    <span>Pinterest</span>
+                </a>
+                <a href="https://www.snapchat.com/" target="_blank" class="card-item">
+                    <img src="./images/iconsnapchat01.svg" alt="Snapchat">
+                    <span>Snapchat</span>
+                </a>
+                <a href="https://www.reddit.com/" target="_blank" class="card-item">
+                    <img src="./images/iconreddit01.svg" alt="Reddit">
+                    <span>Reddit</span>
+                </a>
+                <a href="https://www.twitch.com/" target="_blank" class="card-item">
+                    <img src="./images/icontwitch01.svg" alt="Twitch">
+                    <span>Twitch</span>
+                </a>
+                <a href="https://www.okx.com/" target="_blank" class="card-item">
+                    <img src="./images/okx.svg" alt="OKX">
+                    <span>OKX</span>
+                </a>
+            </div>
+
+            <!-- THIS IS A PART OF QR CODE -->
+             <section id="qr-section"> 
+                    <img src="images/qr.svg" id="user-qr" alt="QR Code">
+             </section>
+            
+             <!-- this is the part of Gallery section -->
+             <div class="gallery-container">
+                <img src="images/business.jpg" alt="Main Preview" class="main-image" id="mainImage">
+                
+                <div class="thumbnail-container">
+                    <img src="images/business-1.webp" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                    <img src="images/business-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/business-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/business-4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/business-5.jpg" alt="Thumbnail 5" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+    
+            <!-- THIS IS A PART OF INFO SECTION -->
+
+            <div class="info-container">
+                <div class="info-header">Info</div>
+                
+                <div class="info-item">
+                    Glen Rock High School – Class of 2017/Honors
+                </div>
+                
+                <div class="info-item">
+                    All-Northern New Jersey Interscholastic League – 2nd team Football Quarterback
+                </div>
+                
+                <div class="info-item">
+                    Junior Engineering Technical Society – Next Generation Scholarship Essay/National Honor Society
+                </div>
+                
+                <div class="info-item">
+                    Internships / Career-Oriented Initiatives/Shadow Day Internship – Johnson & Evans Systems, Inc.
+                </div>
+                
+                <div class="info-item">
+                    Participated in survey engineering site visits/observation of drafting/related professional activities
+                </div>
+                
+                <div class="info-item">
+                    Extracurricular Activities/Community Service/Football/Grades 9 – 12
+                </div>
+                
+                <div class="info-item">
+                    Glen Rock High School Junior Varsity/Varsity Football Team – Three Varsity Letters
+                </div>
+                
+                <div class="info-item">
+                    7 on 7 Summer League Team/Coach: Glen Rock Junior Football Assn. Program
+                </div>
+                
+                <div class="info-item">
+                    Glen Rock Playhouse (Glen Rock High School)/Grade 12
+                </div>
+                
+                <div class="info-item">
+                    Director of Theater Set Design and Construction/Cultural Exchange Club/Grade 9 – 12
+                </div>
+                
+                <div class="info-item">
+                    Participated in week-long stay with host family in Germany (2015)
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
