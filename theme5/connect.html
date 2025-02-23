@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Exchange Details</title>
+    <link rel="icon" type="image/png" href="../images/DC.png" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="connect.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap);
+    </style>
+  </head>
+  <body>
+    <div id="__layout">
+      <div class="page-container">
+      
+        <div class="wrapper">
+          <h1 class="text-title">Exchange Details</h1>
+          <label for="first_name" class="input-label"
+            >First name<span class="required">*</span></label
+          >
+          <input
+            required="required"
+            type="text"
+            id="first_name"
+            placeholder="John"
+            class="input"
+            oninput="checkFields()"
+          />
+          <label for="last_name" class="input-label">Last name</label>
+          <input
+            required="required"
+            type="text"
+            id="last_name"
+            placeholder="Smith"
+            class="input"
+          />
+          <label for="company" class="input-label">Company</label>
+          <input
+            required="required"
+            type="text"
+            id="company"
+            placeholder="Company Name (Optional)"
+            class="input"
+          />
+          <label for="mobile_number" class="input-label">Mobile Number</label>
+          <div class="input-group">
+            <div class="input-group-icon mobile">
+              <img src="image/icon-mobile.png" alt="mobile" />
+            </div>
+            <div class="vue-tel-input">
+             
+
+              <div
+                aria-label="Country Code Selector"
+                aria-haspopup="listbox"
+                role="button"
+                tabindex="0"
+                class="vti__dropdown"
+                onclick="toggleCountryDropdown()"
+              >
+                <span class="vti__selection">
+                  <span class="vti__country-code"> +91 </span>
+                  <span class="vti__dropdown-arrow">▼</span>
+                </span>
+              </div>
+              <ul
+                role="listbox"
+                class="vti__dropdown-list below"
+                id="countryDropdown"
+                style="display: none"
+              >
+                <script src="connect.js"></script>
+                <script>
+                  const countryDropdown =
+                    document.getElementById("countryDropdown");
+                  const countryCodes =
+                    document.querySelectorAll(".vti__country-code");
+
+                  countryList.forEach((country) => {
+                    const listItem = document.createElement("li");
+                    listItem.className = "vti__dropdown-item";
+                    listItem.innerHTML = `<strong>${country.dial_code} </strong><span>&nbsp; ${country.name}</span>`;
+
+                    listItem.addEventListener("click", () => {
+                      countryCodes.forEach((code) => {
+                        code.textContent = country.dial_code;
+                      });
+                      toggleCountryDropdown();
+                    });
+
+                    countryDropdown.appendChild(listItem);
+                  });
+                </script>
+              </ul>
+              <input placeholder="9876543210" class="vti__input" />
+            </div>
+          </div>
+          <label for="email_address" class="input-label"
+            >Email Address<span class="required">*</span></label
+          >
+          <div class="input-group">
+            <div class="input-group-icon">
+              <img src="image/icon-mail1.png" alt="email" />
+            </div>
+            <input
+              required="required"
+              type="email"
+              id="email_address"
+              placeholder="name@email.com"
+              class="input"
+              oninput="checkFields()"
+            />
+          </div>
+          <p class="error" style="height: 0px">Please fill in first name</p>
+          <div disabled="disabled" id="submit" class="btn full-width disabled" >
+            Done
+          </div>
+          <div class="btn outline full-width"><a href="javascript:history.back()">Back</a></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleCountryDropdown() {
+        const dropdown = document.getElementById("countryDropdown");
+        if (dropdown.style.display === "none") {
+          dropdown.style.display = "block";
+        } else {
+          dropdown.style.display = "none";
+        }
+      }
+    
+      function checkFields() {
+        var name = document.getElementById("first_name").value;
+        var email = document.getElementById("email_address").value;
+        var submitButton = document.getElementById("submit");
+        
+        if (name.trim() !== "" && email.trim() !== "") {
+
+          $("#submit").removeClass("disabled");
+          submitButton.classList.remove("disabled");
+          submitButton.disabled = false;
+          
+        } else {
+          $("#submit").addClass("disabled");
+          submitButton.classList.add("disabled");
+          submitButton.disabled = true;
+        }
+      }
+      
+      $("#submit").click(function(){                
+        if(!$(this).hasClass("disabled")){
+          const url = new URL(window.location.href);
+          const urlSearchParams = url.searchParams;
+
+          const number = urlSearchParams.get('whatsapp'); // whatsapp number of the user.
+          
+          $whatsappurl= "https://api.whatsapp.com/send?phone="+number+"&text=Hi, I am *"+$("#first_name").val()+" "+$("#last_name").val()+
+          "* from "+$("#company").val()+", having email *"+$("#email_address").val()+"*. Looking forward to hearing from you soon."            
+          window.open($whatsappurl, "_blank");                   
+          javascript:history.back()
+        }        
+      })
+    </script>
+
+
+<script>
+ 
+</script>
+  </body>
+</html>

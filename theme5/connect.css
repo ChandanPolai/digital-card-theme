@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #efefef;
+    color: #13184b;
+    font-family: "Poppins",sans-serif;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+.page-container, .page-container .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.page-container {
+    background: linear-gradient(180deg,#f6f8fa,#ebeff3);
+    border-radius: 10px;
+    color: #0e0b3c;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 3.8rem 0;
+}
+.page-container .wrapper{
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 350px;
+    text-align: left;
+    width: 100%;
+}
+.page-container, .page-container .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.page-container .wrapper .text-title {
+    color: #2c305d;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.page-container .wrapper .input-label {
+    color: #2c305d;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 0 6px 30px;
+    width: 100%;
+}
+label {
+    cursor: default;
+}
+.page-container .wrapper .input-label .required {
+    color: #ff5359;
+}
+
+.page-container .wrapper .input {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 40px;
+    margin: 0;
+    padding: 0 15px;
+    width: 100%;
+}
+input {
+    line-height: normal;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+input:not([type="range"]):not([type="color"]) {
+    writing-mode: horizontal-tb !important;
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+input {
+    
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+   
+}
+.page-container .wrapper .input-group {
+    position: relative;
+    width: 100%;
+}
+.page-container .wrapper .input-group .input-group-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+}
+.page-container .wrapper .input-group .input-group-icon img {
+    aspect-ratio: 1;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+img {
+    border: 0;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.page-container .wrapper .input-group .input {
+    padding: 0 15px 0 42px;
+}
+.page-container .wrapper .error {
+    color: #ff5359;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px 0 0 30px;
+    overflow: hidden;
+    transition: all .3s linear;
+    width: 100%;
+}
+
+
+.page-container .wrapper .btn.full-width {
+    width: 100%;
+
+}
+.page-container .wrapper .btn.disabled {
+    background-color: #babfce;
+    cursor: not-allowed;
+}
+.page-container .wrapper .btn {
+    align-items: center;
+    background-color: #2C3064;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    
+    /* width: 110px; */
+}
+.btn.disabled {
+    background: #8d8d8d;
+    border: 1px solid #8d8d8d;
+    color: #000;
+    /* margin-right: 12px; */
+}
+.btn {
+    /* background: #ff5359; */
+    
+    border-radius: 10px;
+    font-style: normal;
+    min-width: 5rem;
+    /* padding: .4rem 1rem; */
+    text-align: center;
+   
+    transition: all .2s ease-out;
+  
+}
+.btn {
+    background: #fff;
+    color: #fff;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+}
+.page-container .wrapper .btn.outline {
+    background-color: transparent;
+    color: #2c305d;
+}
+.page-container .wrapper .input-group .input-group-icon.mobile {
+    left: 100px;
+}
+.page-container .wrapper .input-group .input-group-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+}
+.page-container .wrapper .input-group .input-group-icon img {
+    aspect-ratio: 1;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.vue-tel-input {
+    align-items: center;
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.vue-tel-input {
+    /* border: 1px solid #bbb; */
+    border-radius: 3px;
+    /* display: flex; */
+    text-align: left;
+}
+.vue-tel-input .vti__dropdown {
+    background: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 15px;
+}
+.vti__dropdown {
+    align-content: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+    position: relative;
+}
+.vue-tel-input .vti__dropdown .vti__selection {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.vti__selection {
+    align-items: center;
+    display: flex;
+    font-size: .8em;
+}
+.vue-tel-input .vti__dropdown .vti__selection .vti__country-code {
+    font-size: 15px;
+}
+
+
+.vti__selection .vti__country-code {
+    color: #666;
+}
+.vue-tel-input .vti__dropdown .vti__selection .vti__dropdown-arrow {
+    margin-left: 5px;
+}
+
+
+.vti__dropdown-arrow {
+    color: #666;
+    display: inline-block;
+    transform: scaleY(.5);
+}
+.input-group .vue-tel-input .vti__input {
+    padding-left: 35px;
+}
+.vue-tel-input .vti__input {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 40px;
+    margin: 0 0 0 15px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+
+.vti__input {
+    border: none;
+    border-radius: 0 2px 2px 0;
+    outline: none;
+    padding-left: 7px;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.vti__dropdown-list.below {
+    top: 33px;
+}
+
+.vti__dropdown-list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    left: -1px;
+    list-style: none;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    z-index: 1;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}a {
+    color: #13184b;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+.vue-tel-input .vti__dropdown.open .vti__dropdown-list.below .vti__dropdown-item {
+    color: #5d5d5d;
+    font-size: 15px;
+}
+
+
+.vti__dropdown-item {
+    cursor: pointer;
+    padding: 4px 15px;
+}
+
+
+
+@media (max-width: 1024px){
+
+.wrapper {
+    padding: 0 24px;
+}
+}
