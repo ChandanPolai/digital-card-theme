@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- adsbygoogle -->
+                
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="theme7.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
+        
+
+        <!-- <link rel="stylesheet" href="https://dcard.live/assets/newcrd/crd4/use.fontawesome.com/releases/v5.0.13/css/all.css?v=1"> -->
+        <!-- <link href="https://dcard.live/assets/newcrd/crd4/template6/t6-style.css" rel="stylesheet"> -->
+        <!-- <link href="https://dcard.live/assets/newcrd/crd4/common/css/star-rating.css" rel="stylesheet"> -->
+
+        <!-- <link rel="stylesheet" href="https://dcard.live/assets/newcrd/crd4/cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css"> -->
+
+        <link rel="manifest" id="manifest-placeholder">
+        <script>
+         var dynamicManifest = {
+             "name": "DCARD",
+             "short_name": "DCARD",
+             "description": "DCARD",
+             "start_url": "https://www.dcard.live/",
+             "background_color": "#000000",
+             "theme_color": "#0f4a73",
+             "icons": [{
+                 "src": "https://dcard.live/upload/Dcard.png",
+                 "sizes": "256x256",
+                 "type": "image/png"
+             }],
+             "display": "DCARD"
+         }
+         const stringManifest = JSON.stringify(dynamicManifest);
+         const blob = new Blob([stringManifest], {type: 'application/json'});
+         const manifestURL = URL.createObjectURL(blob);
+         document.querySelector('#manifest-placeholder').setAttribute('href', manifestURL);
+        </script>
+        <script>
+         function ColorLuminance(hex, lum) {
+             // validate hex string
+             hex = String(hex).replace(/[^0-9a-f]/gi, '');
+             if (hex.length < 6) {
+                 hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+             }
+             lum = lum || 0;
+         
+             // convert to decimal and change luminosity
+             var rgb = "#", c, i;
+             for (i = 0; i < 3; i++) {
+                 c = parseInt(hex.substr(i*2,2), 16);
+                 c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+                 rgb += ("00"+c).substr(c.length);
+             }
+         
+             return rgb;
+         }
+         document.documentElement.style.setProperty('--theme-color', '#F5B343');
+         document.documentElement.style.setProperty('--theme-color-light', '#F5B34326');
+         document.documentElement.style.setProperty('--theme-color-100', '#F5B343');
+         document.documentElement.style.setProperty('--theme-color-75', '#F5B34390');
+         document.documentElement.style.setProperty('--theme-color-50', '#F5B34380');
+         document.documentElement.style.setProperty('--theme-color-25', '#F5B34370');
+      </script>
+        <style>
+        body {
+            background-image: url(./images/wood.jpg) !important;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            resize: vertical;
+            outline: none;
+            font-size: 14px;
+            font-family: 'Uniform', sans-serif;
+        }
+        .enquiry-form input[type=submit] {
+            background-color: #f5b343;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 6px 0;
+            font-family: 'Uniform', sans-serif;
+        }
+        .contact-action-table{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Uniform', sans-serif;
+        }
+        .contact-action-container-text{
+            font-family: 'Uniform', sans-serif;
+        }
+        .product-enquiry-btn{
+            font-weight: 600;
+        }
+        iframe,.projects-list .project-item,.img-thumbnail {border: 2px solid #071330 !important;border-radius: 10px !important;width: 100% !important;height: 200px !important;margin-bottom: 15px !important;}
+        .img-thumbnail{
+            height: auto !important;
+        }
+        .profile-pic-img {
+            width: 200px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            resize: vertical;
+            outline: none;
+            font-size: 14px;
+            font-family: 'Nunito', sans-serif;
+        }
+        .enquiry-form input[type=submit] {
+            background-color: #f5b343;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 6px 0;
+            font-family: 'Nunito', sans-serif;
+        }
+        .contact-action-table{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Nunito', sans-serif;
+        }
+        .contact-action-container-text,.designation,.firmname{
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+        }
+        .product-enquiry-btn{
+            font-weight: 500;
+            width: fit-content;
+            text-align: center;
+        }
+        iframe,.projects-list .project-item,.img-thumbnail {border: 2px solid #071330 !important;border-radius: 10px !important;width: 100% !important;height: 200px !important;margin-bottom: 15px !important;}
+        .img-thumbnail{
+            height: auto !important;
+        }
+        .profile-pic-img {
+            width: 200px;
+        }
+        .share-buttons.inprofile .share-button i{
+            height: 40px;
+            width: 40px;
+        }
+        body,a,p,span,div,button,input,h1,h2,h3,h4,h5,h6,b{
+            font-family: 'Nunito', sans-serif;
+        }
+        .card{
+            border: none;
+            box-shadow: 0 2px 5px 0 #f5b343ab !important;
+        }
+        </style>
+<!-- Custom CSS -->
+   </head>
+   <body>
+          <div class="page-wrapper" id="home-section">
+         <div class="separator"></div>
+         <div class="views-label"><i class="fas fa-eye"></i> Views: <b>131</b></div>
+         <div class="upper">
+                          <img src="https://dcard.live/upload/Dcard_374698068224978.png" class="profile-pic-img" alt="Logo">
+                        
+            <div class="firmname"> Shree Santosh Textile</div>
+            <div class="firmname-underline"></div>
+            <div class="name"><span style="margin-top: 5px;display: block"><i style="font-size: 12px;">Shree Santosh Textile</i></span></div>
+            <div class="contact-buttons">
+             
+               <a class="contact-button" href="tel:8000629295">
+                <i class="fas fa-phone fa-flip-horizontal"></i>
+               </a>
+                         
+               <a class="contact-button" href="tel:9227810000">
+                <i class="fas fa-phone fa-flip-horizontal"></i>
+               </a>
+                                       <a class="contact-button" target="_blank" href="https://api.whatsapp.com/send?phone=8000629295&text=https://dcard.live/910/shree-santosh-textile">
+               <i class="fab fa-whatsapp"></i>
+               </a>
+                          
+               <a class="contact-button" target="_blank" href="https://maps.app.goo.gl/Si4s3owrTH5JD1St6">
+                <i class="fas fa-map-marker-alt fa-flip-horizontal"></i>
+               </a>
+                           <a class="contact-button" target="_blank" href="mailto:santoshtextilesurat@gmail.com">
+                <i class="fas fa-envelope fa-flip-horizontal"></i>
+               </a>
+            </div>
+         </div>
+         <div class="lower">
+            <div class="contact-info-container">
+               <div class="contact-info-wrapper">
+                  <a class="contact-piller-button call" target="_blank" href="tel:8000629295">
+                  <i class="fas fa-phone fa-flip-horizontal"></i>
+                  </a>
+                  <div class="contact-info">
+                     <div>
+                         <a target="_blank" href="tel:8000629295">8000629295</a>
+                                                    <br /><a target="_blank" href="tel:9227810000" class="contact-action-container-text">
+                            9227810000                            </a>
+                                             </div>
+                  </div>
+               </div>
+                              <div class="contact-info-wrapper">
+                  <a class="contact-piller-button" target="_blank" href="mailto:santoshtextilesurat@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                  </a>
+                  <div class="contact-info">
+                     <a target="_blank" href="mailto:santoshtextilesurat@gmail.com">santoshtextilesurat@gmail.com</a>
+                  </div>
+               </div>
+                              <div class="contact-info-wrapper">
+                  <a class="contact-piller-button" target="_blank" href="https://maps.app.goo.gl/Si4s3owrTH5JD1St6">
+                  <i class="fas fa-map-marker-alt"></i>
+                  </a>
+                  <div class="contact-info">
+                     <a target="_blank" href="https://maps.app.goo.gl/Si4s3owrTH5JD1St6">Shop No.151-152 MILLENIUM 2, behind Raghukul Market, Surat, Gujarat 395002</a>
+                  </div>
+               </div>
+                           </div>
+                        <div style="padding: 15px;">
+               <div class="p-30"></div>
+               <div class="whatsapp-input">
+                  <div class="input-wrapper">
+                                          <input type="hidden" id="whatsapp-msg" value="https://dcard.live/910/shree-santosh-textile"/>  
+                     <input type="tel" id="whatsapp-input" class="input" placeholder="Enter whatsapp number" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                  </div>
+                  <a class="whatsapp-button" target="_blank" href="javascript:;" onclick="handleWhatsappShare(this)">
+                  <i class="fab fa-whatsapp"></i>Share on Whatsapp
+                  </a>
+               </div>
+               <div class="p-20"></div>
+               <div class="shadow-buttons">
+                  <a class="shadow-button" href="https://dcard.live/vcf/910" download=""><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
+                  <a class="shadow-button" onclick="openShareModal(this, `DCARD`)"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
+               </div>
+               <div>
+                  <a class="shadow-button save-card-button"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a>
+               </div>
+               <div class="p-30"></div>
+               <ul class="inprofile share-buttons" style="height:70px;margin-left: 3px;">
+                                <li class="share-button">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=8000629295&text=https://dcard.live/910/shree-santosh-textile" style="width: 40px;height: 40px;font-size: 20px;color:#fff;margin: 7px;"><i style="font-size: 23px;" class="share-button-whatsapp fab fa-whatsapp"></i></a>
+                </li>
+                                                <li class="share-button">
+                    <a target="_blank" href="https://www.facebook.com/santoshtextilesurat?mibextid=ZbWKwL" style="width: 40px;height: 40px;font-size: 20px;color:#fff;margin: 7px;"><i class="share-button-facebook fab fa-facebook"></i></a>
+                </li>
+                                                <li class="share-button">
+                    <a target="_blank" href="https://www.instagram.com/shree_santosh_textile" style="width: 40px;height: 40px;font-size: 20px;color:#fff;margin: 7px;"><i class="share-button-instagram fab fa-instagram"></i></a>
+                </li>
+                                                                                </ul>
+               <div class="p-20"></div>
+            </div>
+            <div class="bottom-separator"></div>
+         </div>
+      </div>
+      <div class="section-container" id="about-us-section">
+         <div class="separator"></div>
+         <div class="section-content-wrapper">
+            <h2 class="section-header">About Us</h2>
+            <div class="section-header-underline"></div>
+            <p><strong>Shri Santosh Textile</strong>, with a legacy spanning over 35 years, is a trusted name in the textile industry known for its exceptional blend of experience, creativity, and value-driven products. Rooted in strong ethics and trust, the company is committed to delivering goods of accurate quality with prompt delivery. Guided by its core values of trust, value in products, and respect for all, Shri Santosh Textile has earned a reputation for reliability and excellence.</p><p>&nbsp;</p><p>As a zero-debt company, Shri Santosh Textile stands out as a leading and well-recognized brand, supplying its products across key markets, including Bengal, Maharashtra, Madhya Pradesh, Uttar Pradesh, Telangana, Karnataka, and other states.</p>         </div>
+         <div class="bottom-separator"></div>
+      </div>
+      
+            
+      <div class="section-container" id="products-services-section">
+         <div class="separator"></div>
+         <div class="section-content-wrapper">
+            <h2 class="section-header">
+                                    Gallery
+                            </h2>
+            <div class="section-header-underline"></div>
+            <div>
+                            <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_839265440178523.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_839265440178523.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785231.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785231.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785232.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785232.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785233.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785233.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785234.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785234.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785235.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785235.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785236.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785236.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785237.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785237.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785238.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785238.jpeg" target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                                        <div class="card">
+                    <div class="text-center">
+                      <img onclick="openImageModal(this)" alt=" Shree Santosh Textile" src="https://dcard.live/upload/Dcard_8392654401785239.jpeg" style="width:100%;margin-bottom: 9px;">
+                    </div>
+                                            <div class="product-enquiry-section">
+                          <a href="https://wa.me/8000629295?text=Hi,%20I%20am%20interested%20in%20your%20service:%20Please%20provide%20more%20details.. %0a%0ahttps://dcard.live/upload/Dcard_8392654401785239.jpeg"  target="blank" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> &nbsp;Enquiry</a>
+                        </div>
+                                    </div>
+                        
+                        
+                     </div>
+         </div>
+         <div class="bottom-separator"></div>
+      </div>
+      
+                  
+            <div class="section-container" id="video-section">
+         <div class="separator"></div>
+         <div class="section-content-wrapper">
+            <h2 class="section-header">Videos</h2>
+            <div class="section-header-underline"></div>
+            <div>
+                                <div class="card" style="padding: 10px">
+                    <iframe width="315" height="560" src="https://www.youtube.com/embed/sFptVZ_gBGg" title="Shree Santosh Textile  #saree #clothingcollection #silkwear #fashioncollection #newarrivals #surat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                                
+                                <div class="card" style="padding: 10px">
+                    <iframe width="315" height="560" src="https://www.youtube.com/embed/pvJ2fRwLO0s" title="Shree Santosh Textile #saree #silkclothing #indiansilksaree #newarrivals #tradionalsaree #silkfabric" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </div>
+                                <div class="section-close"></div>
+             </div>
+             
+                          
+         </div>
+         <div class="bottom-separator"></div>
+      </div>
+            <div class="section-container" id="enquiry-section">
+         <div class="separator"></div>
+         <div class="section-content-wrapper">
+            <h2 class="section-header">Enquiry Form</h2>
+            <div class="section-header-underline"></div>
+            <form method="post" action="https://dcard.live/welcome/whatsapp_me" class="enquiry-form">
+            <span>
+                            </span>
+            <input type="hidden" id="wp_number" name="wp_number" value="8000629295"/>
+            <input type="hidden" id="wp_card" name="wp_card" value="https://dcard.live/910/shree-santosh-textile"/>
+            
+            <div class="form-group">
+                <input class="form-control required" id="name" name="name" placeholder="Name" type="text" required />
+            </div>
+            <div class="form-group">
+                <input class="form-control required" id="email" name="email" placeholder="Email" type="email" required />
+            </div>
+            <div class="form-group">
+                <input class="form-control required" id="subject" type="number" name="subject" placeholder="Mobile Number" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control required" id="message" name="message" placeholder="Message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default form-send" value="Send!">
+            </div>
+         </form>
+         </div>
+         <div class="bottom-separator"></div>
+      </div>
+ 
+      <!-- Footer Menu -->
+      <div class="footer">
+         <ul class="footer-menu">
+            <li>
+               <a class="footer-menu-link" href="#home-section">
+                  <i class="footer-menu-icon fas fa-home"></i>
+                  <div class="footer-menu-text">HOME</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#about-us-section">
+                  <i class="footer-menu-icon fas fa-briefcase"></i>
+                  <div class="footer-menu-text">ABOUT US</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#products-services-section">
+                  <i class="footer-menu-icon fas fa-box-open"></i>
+                  <div class="footer-menu-text">                        GALLERY
+                    </div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#payment-options-section">
+                  <i class="footer-menu-icon fas fa-money-bill-alt"></i>
+                  <div class="footer-menu-text">PAYMENT</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#video-section">
+                  <i class="footer-menu-icon fas fa-video"></i>
+                  <div class="footer-menu-text">VIDEOS</div>
+               </a>
+            </li>
+            <li>
+               <a class="footer-menu-link" href="#enquiry-section">
+                  <i class="footer-menu-icon fas fa-comment-alt"></i>
+                  <div class="footer-menu-text">ENQUIRY</div>
+               </a>
+            </li>
+         </ul>
+      </div>
+      <!-- The image Modal -->
+      <div id="imageModal" class="modal">
+         <span class="close" id="imageModalClose">&times;</span>
+         <img class="modal-content fadeIn" id="img01">
+         <div id="caption"></div>
+      </div>
+      <!-- The share Modal -->
+      <div id="shareModal" class="modal share-modal">
+         <div class="share-form fadeInUpBig">
+            <div class="share-form-header">
+               <h3 class="share-form-header-text">Share Profile</h3>
+               <span class="close" id="shareModalClose">&times;</span>
+            </div>
+            <div class="share-form-buttons-container">
+               <p>Share my Digital Card in your network.</p>
+               <div class="share-buttons-heading">
+                  <img src="https://dcard.live/assets/newcrd/crd2/template1/tild-arrow.svg" class="share-buttons-arrow">
+                  <div class="share-buttons-heading-text">Share my Digital Card</div>
+               </div>
+               <ul class="share-buttons">
+                  <li class="share-button">
+                     <a href="https://api.whatsapp.com/send?phone=8000629295&text=https://dcard.live/910/shree-santosh-textile" target="_blank">
+                     <i class="share-button-whatsapp fab fa-whatsapp"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="sms:?body=https://dcard.live/910/shree-santosh-textile">
+                     <i class="share-button-sms fas fa-comment-dots"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://dcard.live/910/shree-santosh-textile" class="fb-xfbml-parse-ignore">
+                     <i class="share-button-facebook fab fa-facebook-f"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="https://twitter.com/intent/tweet?text=https://dcard.live/910/shree-santosh-textile" data-size="large">
+                     <i class="share-button-twitter fab fa-twitter"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="http://pinterest.com/pin/create/link/?url=https://dcard.live/910/shree-santosh-textile">
+                     <i class="share-button-pinterest fab fa-pinterest-p"></i>
+                     </a>
+                  </li>
+                  <li class="share-button">
+                     <a target="_blank" href="mailto:?subject=Digital Card&amp;body=Check out this digital card https://dcard.live/910/shree-santosh-textile">
+                     <i class="share-button-mail fas fa-envelope"></i>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="theme7.js"></script>
+      
+      <!-- <script src="https://dcard.live/assets/newcrd/crd4/cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script> -->
+      <!-- <script src="https://dcard.live/assets/newcrd/crd4/cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script> -->
+      <!-- <script src="https://dcard.live/assets/newcrd/crd4/common/js/star-rating.js"></script> -->
+      <!-- <script src="https://dcard.live/assets/newcrd/crd4/common/js/script.js?v=12345"></script> -->
+
+      
+      <!-- hit -->
+        
+                <div style="margin-top: 20px;margin-bottom: 0px;background-color: #fff;padding: 10px;">
+            <a target="_blank" href="https://dcard.live/725/sumit-mishra" style="color:#222;font-weight: 600;">Powered by SATVBIZ</a>
+        </div>
+        
+   </body>
+</html>
